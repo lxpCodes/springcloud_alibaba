@@ -1,0 +1,27 @@
+server:
+  port: 8093
+spring:
+  application:
+    name: order-service #微服务id
+#  profiles:
+#    active: prd #指定环境名
+  cloud:
+    nacos:
+      config:
+        enabled: false
+      discovery:
+        server-addr: 192.168.3.67:8848
+        username: nacos
+        password: nacos
+#      config: #这里配置的是Nacos配置中心
+#        file-extension: yml #指定文件扩展名
+#        server-addr: 192.168.3.67:8848
+#        username: nacos
+#        password: nacos
+
+custom:
+  flag: development
+  database: 192.168.3.67
+#logging:
+#  level:
+#    root: debug

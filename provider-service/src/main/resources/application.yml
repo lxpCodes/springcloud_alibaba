@@ -1,0 +1,11 @@
+server:
+  port: 8010 #服务端口
+spring:
+  application:
+    name: provider-service #微服务id
+  cloud:
+    nacos: #nacos注册地址
+      discovery:
+        server-addr: 192.168.3.67:8848
+        username: nacos
+        password: nacos

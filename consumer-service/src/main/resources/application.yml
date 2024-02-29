@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: consumer-service #微服务id
+#  profiles:
+#    active: prd #指定环境名
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.3.67:8848
+        username: nacos
+        password: nacos
+server:
+  port: 9020
+
+logging:
+  level:
+    root: debug
+
+provider-service: #服务提供者的微服务id
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule #设置对应的负载均衡类
